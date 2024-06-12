@@ -4,20 +4,29 @@
   <title>Tab Saver and Restorer</title>
   <style>
     body {
-      width: 200px;
+      width: 300px;
       font-family: Arial, sans-serif;
     }
     button {
       margin: 10px;
       padding: 10px;
-      width: 160px;
+      width: 260px;
       text-align: center;
+    }
+    .tabs-list {
+      max-height: 200px;
+      overflow-y: auto;
+      margin: 10px;
+      border: 1px solid #ccc;
+      padding: 10px;
     }
   </style>
 </head>
 <body>
   <button id="save">Save Tabs</button>
   <button id="restore">Restore Tabs</button>
+  <div id="tabsContainer" class="tabs-list" style="display: none;"></div>
+  <button id="confirmRestore" style="display: none;">Confirm Restore</button>
   <script src="popup.js"></script>
 </body>
 </html>
